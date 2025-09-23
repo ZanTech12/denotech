@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Signup — Courses</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f6f8fb; padding: 20px; }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    h1 { font-size: 22px; margin-bottom: 6px; }
+    p.lead { margin-bottom: 20px; color: #555; }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .full { grid-column: 1 / -1; }
+
+    label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; }
+    input, select, textarea {
+      width: 100%; padding: 10px; border: 1px solid #ccc;
+      border-radius: 8px; font-size: 14px;
+    }
+
+    textarea { resize: vertical; min-height: 100px; }
+
+    /* Organized radio group */
+    .radio-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* two-column layout */
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .radio {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .radio:hover {
+      background: #f0f6ff;
+      border-color: #0066ff;
+    }
+
+    .radio input {
+      margin-top: 4px;
+      accent-color: #0066ff;
+    }
+
+    .radio .title {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .radio .desc {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .actions { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
+    .btn { padding: 10px 16px; border-radius: 6px; border: none; cursor: pointer; font-weight: bold; }
+    .btn-primary { background: #0066ff; color: #fff; }
+    .btn-ghost { background: #eee; color: #333; }
+
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .radio-group { grid-template-columns: 1fr; } /* stack radios on mobile */
+      .actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sign up for Our Courses</h1>
+    <p class="lead">Choose a course and fill in your details. We’ll get back to you with more information.</p>
+
+    <form>
+      <div class="grid">
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+234 80X XXX XXXX" required>
+        </div>
+        <div>
+          <label for="branch">Preferred Branch</label>
+          <select id="branch" name="branch" required>
+            <option value="">Select a branch</option>
+            <option>Main Branch</option>
+            <option>Branch 1</option>
+            <option>Branch 2</option>
+            <option>Branch 3</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label>Select a Course</label>
+          <div class="radio-group">
+            <label class="radio">
+              <input type="radio" name="course" value="web-design" required>
+              <div>
+                <div class="title">Web Design</div>
+                <div class="desc">Learn UI/UX, HTML, CSS, and responsive design.</div>
+              </div>
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="course" value="web-development" required>
+              <div>
+                <div class="title">Web Development</div>
+                <div class="desc">Frontend + Backend development with modern tools.</div>
+              </div>
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="course" value="mobile-app" required>
+              <div>
+                <div class="title">Mobile Application Development</div>
+                <div class="desc">Build cross-platform apps for Android & iOS.</div>
+              </div>
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="course" value="iot" required>
+              <div>
+                <div class="title">IoT (Internet of Things)</div>
+                <div class="desc">Work with sensors, microcontrollers & cloud integration.</div>
+              </div>
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="course" value="embedded" required>
+              <div>
+                <div class="title">Embedded Systems</div>
+                <div class="desc">Microcontrollers, RTOS, and hardware interfacing.</div>
+              </div>
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="course" value="ml" required>
+              <div>
+                <div class="title">Machine Learning</div>
+                <div class="desc">Train, evaluate, and deploy AI/ML models.</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="full">
+          <label for="notes">Additional Information (optional)</label>
+          <textarea id="notes" name="notes" placeholder="Your preferred schedule, skill level, etc."></textarea>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="reset" class="btn btn-ghost">Reset</button>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Courses & Fees</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+      padding: 50px 20px; 
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowText 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px #00c6ff; }
+      to { text-shadow: 0 0 20px #0072ff, 0 0 30px #00c6ff; }
+    }
+
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 180deg at 50% 50%, #00c6ff, #0072ff, #00c6ff);
+      animation: rotate 6s linear infinite;
+      z-index: 0;
+      opacity: 0.2;
+    }
+
+    @keyframes rotate {
+      100% { transform: rotate(360deg); }
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    }
+
+    .card h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #00c6ff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #ddd;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #0072ff, #00c6ff);
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #00c6ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Courses & Fees</h1>
+
+  <div class="courses">
+    <div class="card">
+      <h2>Web Design</h2>
+      <p>Learn UI/UX, HTML, CSS, and responsive design to create professional websites.</p>
+      <div class="price">₦50,000</div>
+      <a href="./form.html" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="card">
+      <h2>Web Development</h2>
+      <p>Master frontend and backend development with modern frameworks and tools.</p>
+      <div class="price">₦80,000</div>
+      <a href="./form.html" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="card">
+      <h2>Mobile Application Development</h2>
+      <p>Build cross-platform mobile apps for Android and iOS with hands-on training.</p>
+      <div class="price">₦100,000</div>
+      <a href="./form.html" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="card">
+      <h2>IoT (Internet of Things)</h2>
+      <p>Connect devices with sensors, microcontrollers, and cloud platforms.</p>
+      <div class="price">₦120,000</div>
+      <a href="./form.html" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="card">
+      <h2>Embedded Systems</h2>
+      <p>Learn microcontrollers, RTOS, C programming, and hardware interfacing.</p>
+      <div class="price">₦150,000</div>
+      <a href="./form.html" class="btn">Enroll Now</a>
+    </div>
+
+    <div class="card">
+      <h2>Machine Learning</h2>
+      <p>Build and deploy AI/ML models for real-world applications using Python.</p>
+      <div class="price">₦180,000</div>
+      <a href="./form.html" class="btn">Enroll Now</a>
+    </div>
+  </div>
+</body>
+</html>
