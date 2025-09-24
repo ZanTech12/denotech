@@ -1,13 +1,23 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Signup — Courses</title>
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; background: #f6f8fb; padding: 20px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f8fb;
+      padding: 20px;
+    }
 
     .container {
       max-width: 800px;
@@ -15,27 +25,56 @@
       background: #fff;
       padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
 
-    h1 { font-size: 22px; margin-bottom: 6px; }
-    p.lead { margin-bottom: 20px; color: #555; }
-
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .full { grid-column: 1 / -1; }
-
-    label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; }
-    input, select, textarea {
-      width: 100%; padding: 10px; border: 1px solid #ccc;
-      border-radius: 8px; font-size: 14px;
+    h1 {
+      font-size: 22px;
+      margin-bottom: 6px;
     }
 
-    textarea { resize: vertical; min-height: 100px; }
+    p.lead {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
 
     /* Organized radio group */
     .radio-group {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* two-column layout */
+      grid-template-columns: 1fr 1fr;
+      /* two-column layout */
       gap: 16px;
       margin-top: 10px;
     }
@@ -72,24 +111,54 @@
       color: #555;
     }
 
-    .actions { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
-    .btn { padding: 10px 16px; border-radius: 6px; border: none; cursor: pointer; font-weight: bold; }
-    .btn-primary { background: #0066ff; color: #fff; }
-    .btn-ghost { background: #eee; color: #333; }
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: #0066ff;
+      color: #fff;
+    }
+
+    .btn-ghost {
+      background: #eee;
+      color: #333;
+    }
 
     @media (max-width: 700px) {
-      .grid { grid-template-columns: 1fr; }
-      .radio-group { grid-template-columns: 1fr; } /* stack radios on mobile */
-      .actions { flex-direction: column; }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .radio-group {
+        grid-template-columns: 1fr;
+      }
+
+      /* stack radios on mobile */
+      .actions {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Sign up for Our Courses</h1>
     <p class="lead">Choose a course and fill in your details. We’ll get back to you with more information.</p>
 
-    <form>
+    <form action="https://formspree.io/f/mjkavdao" method="POST">
       <div class="grid">
         <div>
           <label for="name">Full Name</label>
@@ -180,4 +249,5 @@
     </form>
   </div>
 </body>
+
 </html>
